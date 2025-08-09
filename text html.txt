@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A&A Clothing Brand</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      cursor: default;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h3 {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      margin: 0;
+      color: #666;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    #about {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    #about h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    #contact {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    #contact h2 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #222;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #000;
+      outline: none;
+    }
+    .contact-form button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-weight: 700;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A&A Clothing</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    Elevate Your Style with A&A
+  </section>
+
+  <section id="products" class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=600&q=80" alt="Classic Black Jacket" />
+      <div class="product-info">
+        <h3>Classic Black Jacket</h3>
+        <p>$120.00</p>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" alt="Elegant White Shirt" />
+      <div class="product-info">
+        <h3>Elegant White Shirt</h3>
+        <p>$80.00</p>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1520974737058-0e362bb7e1d6?auto=format&fit=crop&w=600&q=80" alt="Stylish Denim Jeans" />
+      <div class="product-info">
+        <h3>Stylish Denim Jeans</h3>
+        <p>$90.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About A&A</h2>
+    <p>At A&A Clothing, we create premium fashion pieces that blend modern style with timeless quality. Our mission is to help you express your individuality with confidence and elegance.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" type="text" required placeholder="Your Name" />
+      <label for="email">Email</label>
+      <input id="email" type="email" required placeholder="Your Email" />
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 A&A Clothing Brand. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple form submission alert
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting A&A! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
